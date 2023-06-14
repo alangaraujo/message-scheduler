@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "c79dc0b1-2991-4c90-8758-1e1747f16d20",
+		"name": "Message Scheduling",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Message Scheduling",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messageType\": \"WHATSAPP\",\n    \"scheduleDateTime\": \"1980-04-09T10:15:30+07:00\",\n    \"destination\": \"One Destination\",\n    \"message\": \"Any Message\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/message/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Message Scheduled",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/message/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Message Scheduled not Sent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/message/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
